@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Broilers Inc BW  Luxury in Every Bite</title>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TL835EEDZM"></script>
+<title>Broilers Inc BW | Luxury in Every Bite</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL835EEDZM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +33,12 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 .nav-links{display:flex;gap:1.8rem;list-style:none}
 .nav-links a{color:rgba(255,255,255,0.82);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--yellow)}
+
+.nav-actions{display:flex;align-items:center;gap:10px}
 .nav-cta{background:var(--yellow);color:#111;font-weight:700;padding:9px 20px;border-radius:50px;font-size:0.88rem;text-decoration:none;white-space:nowrap;transition:transform .15s}
 .nav-cta:hover{transform:scale(1.04)}
+.nav-merch{background:transparent;color:var(--white);border:1px solid var(--yellow);font-weight:600;padding:8px 18px;border-radius:50px;font-size:0.85rem;text-decoration:none;transition:all .2s}
+.nav-merch:hover{background:var(--yellow);color:var(--black)}
 
 .numbers-bar{background:var(--yellow);padding:.7rem 5%;display:flex;gap:1.2rem;align-items:center;justify-content:center;flex-wrap:wrap}
 .numbers-bar strong{color:#111;font-size:.88rem}
@@ -95,6 +98,11 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 .wtag{font-size:.78rem;color:var(--muted);background:var(--green-pale);padding:3px 10px;border-radius:50px}
 .btn-wa{display:flex;align-items:center;gap:7px;background:var(--green);color:#fff;padding:10px 15px;border-radius:50px;text-decoration:none;font-size:.88rem;font-weight:600;justify-content:center;transition:background .2s}
 .btn-wa:hover{background:var(--green-light)}
+
+/* Merchandise Teaser Section */
+.merch-teaser{background:linear-gradient(rgba(17,17,17,0.9),rgba(17,17,17,0.9)), url('merch-bg.jpg'); background-size:cover; background-position:center; padding:5rem 5%; color:#fff; text-align:center; border-radius:var(--radius); margin:2rem 5%}
+.merch-teaser h2{color:var(--yellow); margin-bottom:1rem}
+.merch-teaser p{max-width:600px; margin:0 auto 2rem; color:rgba(255,255,255,0.8)}
 
 .payments{background:#111;padding:3rem 5%;text-align:center;border-top:3px solid var(--yellow)}
 .payments h3{font-family:'Playfair Display',serif;color:#fff;font-size:1.5rem;margin-bottom:.5rem}
@@ -168,6 +176,7 @@ footer a:hover{color:var(--yellow)}
 
 @media(max-width:768px){
   .nav-links{display:none}
+  .nav-merch{display:none} /* Optional: hide merch outline button on tiny screens to save space */
   .delivery-inner{grid-template-columns:1fr}
   .hero-logo-big{display:none}
 }
@@ -182,11 +191,13 @@ footer a:hover{color:var(--yellow)}
   </div>
   <ul class="nav-links">
     <li><a href="#products">Products</a></li>
-    <li><a href="#delivery">Delivery</a></li>
+    <li><a href="merch.html">Merchandise</a></li> <li><a href="#delivery">Delivery</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#order">Order</a></li>
   </ul>
-  <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order" class="nav-cta" target="_blank">Order via WhatsApp</a>
+  <div class="nav-actions">
+    <a href="merch.html" class="nav-merch">Shop Merch</a> <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order" class="nav-cta" target="_blank">Order via WhatsApp</a>
+  </div>
 </nav>
 
 <div class="numbers-bar">
@@ -277,6 +288,13 @@ footer a:hover{color:var(--yellow)}
     </div>
 
   </div>
+</section>
+
+<section class="merch-teaser">
+  <div class="label" style="color:var(--yellow)">Style in Every Bite</div>
+  <h2>Official Merchandise</h2>
+  <p>Rep the Broilers Inc. BW brand with our exclusive collection of caps, tees, and aprons. Designed for the youth, by the youth.</p>
+  <a href="merch.html" class="btn-primary">Explore Collection</a>
 </section>
 
 <section class="payments">
@@ -388,6 +406,7 @@ footer a:hover{color:var(--yellow)}
 <ul>
   <li><a href="#products">Slaughtered Chicken — P80</a></li>
   <li><a href="#products">Chicken Insides — P15/bag</a></li>
+  <li><a href="merch.html">Official Merchandise</a></li>
   <li><a href="#products">Bulk Orders</a></li>
 </ul>  </div>
   <div>
@@ -410,7 +429,7 @@ footer a:hover{color:var(--yellow)}
     </ul>
   </div>
 </footer>
-<div class="fbar">2025 Broilers Inc. BW · Luxury in Every Bite · Made with love in Botswana</div>
+<div class="fbar">2026 Broilers Inc. BW · Luxury in Every Bite · Made with love in Botswana</div>
 
 <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order" class="swa" target="_blank" title="Order via WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.17-.008-.37-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
