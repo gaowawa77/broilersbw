@@ -22,16 +22,15 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 
 .merch-hero{background:#111;color:white;padding:4rem 5%;text-align:center;border-bottom:4px solid var(--green)}
 .merch-hero h1{font-size:3rem;margin-bottom:1rem}
-.merch-hero p{color:var(--yellow);font-style:italic;font-size:1.2rem}
+.merch-hero p{color:var(--yellow);font-style:italic;font-size:1.2rem;margin-bottom:0.5rem}
+.merch-hero .supporter-text {color:rgba(255,255,255,0.7); font-size:1rem; font-family:'DM Sans',sans-serif; font-style: normal; letter-spacing: 1px;}
 
 .container{padding:5rem 5%;max-width:1200px;margin:0 auto}
 .merch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem}
 
-/* Card Styling */
 .merch-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:transform 0.3s;border:1px solid #eee}
 .merch-card:hover{transform:translateY(-10px)}
 
-/* HOVER IMAGE LOGIC */
 .merch-img{width:100%;height:400px;overflow:hidden;background:#f9f9f9;position:relative}
 .merch-img img{
     width:100%;
@@ -42,17 +41,9 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
     left:0;
     transition: opacity 0.5s ease;
 }
-/* The "Back" image is hidden by default */
-.img-back {
-    opacity: 0;
-}
-/* When hovering the card, hide the front and show the back */
-.merch-card:hover .img-front {
-    opacity: 0;
-}
-.merch-card:hover .img-back {
-    opacity: 1;
-}
+.img-back { opacity: 0; }
+.merch-card:hover .img-front { opacity: 0; }
+.merch-card:hover .img-back { opacity: 1; }
 
 .merch-info{padding:1.5rem;text-align:center}
 .merch-info h3{font-size:1.3rem;margin-bottom:0.5rem}
@@ -80,6 +71,7 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 <section class="merch-hero">
   <h1>Official Apparel</h1>
   <p>Luxury in Every $titch</p>
+  <p class="supporter-text">For the real $upporters</p>
 </section>
 
 <div class="container">
@@ -87,8 +79,8 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
     
     <div class="merch-card">
       <div class="merch-img">
-        <img src="black_front.png" class="img-front" alt="Black Tee Back">
-        <img src="black-back.png" class="img-back" alt="Black Tee Front">
+        <img src="black-back.png" class="img-front" alt="Black Tee Back View">
+        <img src="black_front.png" class="img-back" alt="Black Tee Front View">
       </div>
       <div class="merch-info">
         <h3>OG Broilers $ignature Tee Black</h3>
@@ -99,8 +91,8 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 
     <div class="merch-card">
       <div class="merch-img">
-        <img src="white-front.png" class="img-back" alt="White Tee Front">
-        <img src="white-back.png" class="img-front" alt="White Tee Back">
+        <img src="white-front.png" class="img-front" alt="White Tee Front View">
+        <img src="white-back.png" class="img-back" alt="White Tee Back View">
       </div>
       <div class="merch-info">
         <h3>OG Broilers $ignature Tee White</h3>
@@ -111,8 +103,8 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 
     <div class="merch-card">
       <div class="merch-img">
-        <img src="green-front.png" class="img-front" alt="Green Tee Back">
-        <img src="green-back.png" class="img-back" alt="Green Tee Front">
+        <img src="green-back.png" class="img-front" alt="Green Tee Back View">
+        <img src="green-front.png" class="img-back" alt="Green Tee Front View">
       </div>
       <div class="merch-info">
         <h3>OG Broilers $ignature Tee Green</h3>
@@ -120,6 +112,7 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
         <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order%20the%20Green%20Merch%20Tee" class="btn-buy" target="_blank">Order on WhatsApp</a>
       </div>
     </div>
+
   </div>
 
   <center>
