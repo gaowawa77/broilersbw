@@ -29,11 +29,28 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 
 .merch-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:transform 0.3s;border:1px solid #eee}
 .merch-card:hover{transform:translateY(-10px)}
-.merch-img{width:100%;height:380px;overflow:hidden;background:#f9f9f9;display:flex;align-items:center;justify-content:center}
-.merch-img img{width:100%;height:100%;object-fit:cover}
+
+/* HOVER IMAGE LOGIC */
+.merch-img{width:100%;height:400px;background:#f9f9f9;position:relative;overflow:hidden}
+.merch-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: opacity 0.4s ease-in-out;
+}
+/* Show front by default, hide back */
+.img-back { opacity: 0; }
+.img-front { opacity: 1; }
+
+/* When hovering over the card, swap them */
+.merch-card:hover .img-front { opacity: 0; }
+.merch-card:hover .img-back { opacity: 1; }
 
 .merch-info{padding:1.5rem;text-align:center}
-.merch-info h3{font-size:1.5rem;margin-bottom:0.5rem}
+.merch-info h3{font-size:1.2rem;margin-bottom:0.5rem;font-weight:600}
 .price-tag{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--green);margin-bottom:1rem;display:block}
 
 .btn-buy{display:block;background:var(--green);color:white;text-decoration:none;padding:12px;border-radius:50px;font-weight:700;transition:background 0.2s}
@@ -65,10 +82,11 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
     
     <div class="merch-card">
       <div class="merch-img">
-        <img src="black.png" alt="Black Broilers Inc Tee">
+        <img src="WhatsApp Image 2026-04-29 at 17.39.21 (2).jpeg" class="img-front" alt="Black Tee Front">
+        <img src="WhatsApp Image 2026-04-29 at 17.39.20 (2).jpeg" class="img-back" alt="Black Tee Back">
       </div>
       <div class="merch-info">
-        <h3>Signature Tee (Black)</h3>
+        <h3>OG Broilers Signature Tee (Black)</h3>
         <span class="price-tag">P200.00</span>
         <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order%20the%20Black%20Merch%20Tee" class="btn-buy" target="_blank">Order on WhatsApp</a>
       </div>
@@ -76,10 +94,11 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 
     <div class="merch-card">
       <div class="merch-img">
-        <img src="WhatsApp Image 2026-04-29 at 17.39.21 (1).jpeg" alt="Green Broilers Inc Tee">
+        <img src="WhatsApp Image 2026-04-29 at 17.39.21 (1).jpeg" class="img-front" alt="Green Tee Front">
+        <img src="WhatsApp Image 2026-04-29 at 17.39.20 (1).jpeg" class="img-back" alt="Green Tee Back">
       </div>
       <div class="merch-info">
-        <h3>Signature Tee (Green)</h3>
+        <h3>OG Broilers Signature Tee (Green)</h3>
         <span class="price-tag">P200.00</span>
         <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order%20the%20Green%20Merch%20Tee" class="btn-buy" target="_blank">Order on WhatsApp</a>
       </div>
@@ -87,10 +106,11 @@ nav{background:#111;padding:0 5%;display:flex;align-items:center;justify-content
 
     <div class="merch-card">
       <div class="merch-img">
-        <img src="WhatsApp Image 2026-04-29 at 17.39.21.jpeg" alt="White Broilers Inc Tee">
+        <img src="WhatsApp Image 2026-04-29 at 17.39.21.jpeg" class="img-front" alt="White Tee Front">
+        <img src="WhatsApp Image 2026-04-29 at 17.39.20.jpeg" class="img-back" alt="White Tee Back">
       </div>
       <div class="merch-info">
-        <h3>Signature Tee (White)</h3>
+        <h3>OG Broilers Signature Tee (White)</h3>
         <span class="price-tag">P200.00</span>
         <a href="https://wa.me/26775448225?text=Hi%2C%20I%20want%20to%20order%20the%20White%20Merch%20Tee" class="btn-buy" target="_blank">Order on WhatsApp</a>
       </div>
